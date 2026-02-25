@@ -15,23 +15,23 @@ const NavBar = ({ darkMode, toggleDarkMode} ) => {
     { name: 'Contact', link: '#contact'}
   ];
   const lightColors = {
-    navBg: 'bg-linear-to-br from-blue-200 to-white',
-    textPrimary: 'text-gray-900',
+    navBg: 'bg-linear-to-br from-blue-200 to-green-200',
+    textPrimary: 'text-blue-500',
     textSecondary: 'text-gray-800',
     textHover: 'text-blue-500',
     textActive: 'text-blue-600',
-    indicator: 'from-blue-500 to-amber-500',
-    button: 'from-blue-500 to-amber-500'
+    indicator: 'from-blue-500 to-green-500',
+    button: 'from-blue-500 to-green-500'
   };
   
   const darkColors = {
-    navBg: 'bg-linear-to-br from-gray-700 to-black',
-    textPrimary: 'text-white',
-    textSecondary: 'text-gray-300',
+    navBg: 'bg-linear-to-br from-blue-200 to-green-200',
+    textPrimary: 'text-blue-500',
+    textSecondary: 'text-gray-800',
     textHover: 'text-blue-400',
     textActive: 'text-blue-400',
-    indicator: 'from-blue-500 to-amber-500',
-    button: 'from-blue-500 to-amber-500'
+    indicator: 'from-blue-500 to-green-500',
+    button: 'from-blue-500 to-green-500'
   };
   
   const colors = darkMode ? darkColors : lightColors;
@@ -56,7 +56,7 @@ const NavBar = ({ darkMode, toggleDarkMode} ) => {
                 whileHover = {{ scale: 1.05}}
                 className = "flex items-center space-x-2">
                   <span className = {`text-xl font-bold ${colors.textPrimary}`}>
-                    PROfiles<span className = "text-blue-500">.</span>
+                    VJ <span className = "text-blue-500">Elciario</span>
                   </span>
                 </motion.a>
                 {/*Navigation Items*/}
@@ -98,7 +98,7 @@ const NavBar = ({ darkMode, toggleDarkMode} ) => {
                   whileTap={{scale:0.9}}
                   onClick={toggleDarkMode}
                   className = {`p-2 rounded-full ${darkMode
-                      ? 'bg-blue-700'
+                      ? 'bg-gray-200'
                       : 'bg-gray-200'
                   } transition-colors`}
                   aria-label = {darkMode
@@ -106,9 +106,9 @@ const NavBar = ({ darkMode, toggleDarkMode} ) => {
                     : 'Switch to dark mode'
                   }>
                       {darkMode ? (
-                        <Sun className = "w-5 h-5 text-orange-300"/>
+                        <Sun className = "w-5 h-5 text-green-600"/>
                       ) : (
-                        <Moon className = "w-5 h-5 text-gray-700"/>
+                        <Moon className = "w-5 h-5 text-blue-600"/>
                       )}
                   </motion.button>
                   {/* Button */}
@@ -118,7 +118,7 @@ const NavBar = ({ darkMode, toggleDarkMode} ) => {
                   whileTap={{scale:0.95}}
                   className={`hidden lg:block px-6 py-2 font-semibold
                   rounded-full bg-linear-to-r ${colors.button}
-                  text-white shadow-md hover:shadow-lg transition-shadow`}>
+                  text-yellow-500 shadow-md hover:shadow-lg transition-shadow`}>
                       Hire Me
                   </motion.a>
                 </div>
@@ -187,7 +187,7 @@ const NavBar = ({ darkMode, toggleDarkMode} ) => {
                   onClick={() => setIsMenuOpen(false)}
                   whileTap={{scale:0.95}}
                   className = {`block py-3 px-4 text-center font-semibold
-                  rounded-lg bg-linear-to-r ${colors.button} text-white shadow-md`}>
+                  rounded-lg bg-linear-to-r ${colors.button} text-yellow-500 shadow-md`}>
                     Hire Me
                   </motion.a>
                 </div>
